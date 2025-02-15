@@ -4,7 +4,7 @@ import Header from "./component/Header/Header";
 
 function App() {
   return (
-    <div className="max-w-screen-xl">
+    <div>
       <Header></Header>
       <div className="md:flex max-w-7xl mx-auto">
         <Blogs></Blogs>
