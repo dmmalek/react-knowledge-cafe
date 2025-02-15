@@ -12,12 +12,12 @@ const Blog = ({ blog }) => {
   } = blog;
   return (
     <div>
-      <div>
-        <img src={cover} />
+      <div className="w-full p-2">
+        <img className="w-full rounded-lg" src={cover} />
       </div>
-      <div>
-        <div>
-          <div>
+      <div className="flex justify-between p-2">
+        <div className="flex gap-2 p-2">
+          <div className="w-12">
             <img src={author_img} alt={author} />
           </div>
           <div>
@@ -26,18 +26,20 @@ const Blog = ({ blog }) => {
           </div>
         </div>
         <div>
-          <p>{reading_time}</p>
+          <p>{reading_time} min reads</p>
         </div>
       </div>
-      <div>
-        <h2>{title}</h2>
+      <div className="p-2">
+        <h2 className="font-bold text-4xl">{title}</h2>
       </div>
-      <div>
+      <div className="p-2">
         {hashtags.map((hashtag, idx) => (
-          <a key={idx}>#{hashtag}</a>
+          <a className="pl-1" key={idx}>
+            #{hashtag}
+          </a>
         ))}
       </div>
-      <div>
+      <div className="p-2">
         <a href="#">Marks as Read</a>
       </div>
     </div>
