@@ -8,8 +8,14 @@ function App() {
   const [readingTime, setReadingTime] = useState(0);
 
   const handleBookmark = (blog) => {
-    const newBookmarks = [...bookmarks, blog];
-    setBookmarks(newBookmarks);
+    console.log(blog);
+    const isExist = bookmarks.find((b) => b.id === blog.id);
+    if (isExist) {
+      alert("Already Marked");
+    } else {
+      const newBookmarks = [...bookmarks, blog];
+      setBookmarks(newBookmarks);
+    }
   };
 
   const handleReadingTime = (id, time) => {
